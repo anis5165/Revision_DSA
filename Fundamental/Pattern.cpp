@@ -133,35 +133,35 @@ int main(){
 
 
     //pyramid pattern
-    // int n=4;
-    // for(int i=0;i<n;i++){
-    //     //spaces
-    //     for(int j=0;j<n-i-1;j++){
-    //         cout<<" ";
-    //     }
-    //     //Number
-    //     for(int j=1;j<=i+1;j++){
-    //         cout<<j;
-    //     }
-    //     //Number
-    //     for(int j=1;j<=i;j++){
-    //         cout<<j;
-    //     }
-    //     cout<<endl;
-        
-    // }
-
-
-    //Hollow Diamond Pattern
     int n=4;
     for(int i=0;i<n;i++){
         //spaces
         for(int j=0;j<n-i-1;j++){
             cout<<" ";
         }
-        for(int j=0;j<i+1;j++){
-            cout<<"*";
+        //Number
+        for(int j=1;j<=i+1;j++){
+            cout<<j;
         }
+        //Number
+        for(int j=1;j<=i;j++){
+            cout<<j;
+        }
+        cout<<endl;
+        
     }
+
+
+    //Hollow Diamond Pattern
+    // int n=4;
+    // for(int i=0;i<n;i++){
+    //     //spaces
+    //     for(int j=0;j<n-i-1;j++){
+    //         cout<<" ";
+    //     }
+    //     for(int j=0;j<i+1;j++){
+    //         cout<<"*";
+    //     }
+    // }
 
 }
