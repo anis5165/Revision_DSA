@@ -6,18 +6,23 @@ int main(){
     int arr[] = {5,7,2,6,1,9,10,55,13,65,12};
     int n = sizeof(arr)/sizeof(arr[0]);
 
-    int largest = INT_MIN;
+    int third = INT_MIN;
+    int second = INT_MIN;
+    int first = INT_MIN;
     for(int i=0;i<n;i++){
-        if(arr[i]>largest) largest = arr[i];
+        if(arr[i]>first){
+            third = second;
+            second = first;
+            first = arr[i];
+        }
+        else if(arr[i]>second){
+            third = second;
+            second = arr[i];
+        }
+        else if(arr[i]>third){
+            third = arr[i];
+        }
     }
-    cout<<"First Largest Elements : "<<largest<<endl;
-    for(int i=0;i<n;i++){
-        if(largest<arr[i]) largest = arr[i-1];
-    }
-    cout<<"Second Largest Elements : "<<largest<<endl;
-    // for(int i=0;i<n;i++){
-    //     if(largest<arr[i]) largest = arr[i];
-    // }
-    // cout<<"Third Largest Elements : "<<largest<<endl;
+    cout<<"First Largest Elements : "<<first<<"\nSecond Largest Element : "<<second<<"\nThird Largest Elements : "<<third<<endl;
 
 }
