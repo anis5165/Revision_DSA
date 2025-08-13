@@ -5,8 +5,12 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
     int* ptr = arr;     //giving address of the first element of an array
     for(int i=0;i<n;i++){
-        cout<<ptr<<" ";
+        cout<<*ptr<<" ";
+        ptr++;
     }
+    ptr = arr;
+
+    *ptr = 8;
     cout<<endl;
     for(int i=0;i<n;i++){
         cout<<ptr[i]<<" ";
