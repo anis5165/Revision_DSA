@@ -26,7 +26,7 @@ int main(){
             lo = i;
         }
     }
-
+!
     cout << "The largest element: " << arr[hi] << endl;
     cout << "The smallest element: " << arr[lo] << endl;
 }
